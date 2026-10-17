@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHK Marble Art - Exquisite Handcrafted Fountains, Temples, Lamps & Jali Work</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        marble: {
+                            50: '#fcfbf9',
+                            100: '#f5f2eb',
+                            200: '#e8e1d3',
+                            300: '#d7ccb5',
+                            400: '#bfaf91',
+                            500: '#ab9773',
+                            600: '#947e5b',
+                            700: '#776348',
+                            800: '#61503c',
+                            900: '#504233'
+                        },
+                        gold: {
+                            light: '#dfc28e',
+                            DEFAULT: '#c5a059',
+                            dark: '#9e7b37'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfbf9;
+            color: #332d25;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f5f2eb;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ab9773;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #947e5b;
+        }
+    </style>
+</head>
+<body class="bg-marble-50 text-marble-900 antialiased selection:bg-gold-light selection:text-marble-900">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-marble-900 text-marble-100 text-xs sm:text-sm py-2 px-4 text-center font-light tracking-wide flex justify-center items-center gap-4">
+        <span><i class="fas fa-gem text-gold mr-1.5"></i> Master Craftsmanship in Fountains, Temples, Jali & Handicrafts</span>
+        <span class="hidden md:inline">|</span>
+        <span class="hidden md:inline"><i class="fas fa-phone-alt text-gold mr-1.5"></i> Contact Order & Inquiry: +91 92147 84335</span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header id="navbar" class="sticky top-0 z-40 bg-marble-50/95 backdrop-blur-md border-b border-marble-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-marble-900 flex items-center justify-center border-2 border-gold shadow-md group-hover:scale-105 transition-transform">
+                    <span class="text-gold font-serif font-bold text-lg">AHK</span>
+                </div>
+                <div>
+                    <span class="block font-serif font-bold text-xl sm:text-2xl tracking-wide text-marble-900">AHK MARBLE ART</span>
+                    <span class="block text-[10px] sm:text-xs tracking-widest text-marble-600 uppercase">Handcrafted Fountains & Temples</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-marble-800">
+                <a href="#home" class="hover:text-gold transition-colors">Home</a>
+                <a href="#products" class="hover:text-gold transition-colors">Products</a>
+                <a href="#about" class="hover:text-gold transition-colors">About Us</a>
+                <a href="#gallery" class="hover:text-gold transition-colors">Gallery</a>
+                <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="tel:9214784335" class="bg-marble-900 hover:bg-marble-800 text-gold-light border border-gold/40 px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow flex items-center gap-2">
+                    <i class="fas fa-phone-alt text-xs"></i>
+                    <span>+91 9214784335</span>
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-marble-900 hover:text-gold focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-marble-100 border-b border-marble-200 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#home" class="block text-lg font-medium text-marble-900 hover:text-gold py-1 mobile-link">Home</a>
+            <a href="#products" class="block text-lg font-medium text-marble-900 hover:text-gold py-1 mobile-link">Products</a>
+            <a href="#about" class="block text-lg font-medium text-marble-900 hover:text-gold py-1 mobile-link">About Us</a>
+            <a href="#gallery" class="block text-lg font-medium text-marble-900 hover:text-gold py-1 mobile-link">Gallery</a>
+            <a href="#contact" class="block text-lg font-medium text-marble-900 hover:text-gold py-1 mobile-link">Contact</a>
+            <div class="pt-4 border-t border-marble-300 flex flex-col gap-3">
+                <a href="tel:9214784335" class="w-full bg-marble-900 text-gold text-center py-3 rounded-xl font-medium flex items-center justify-center gap-2">
+                    <i class="fas fa-phone-alt"></i> Call Now: 9214784335
+                </a>
+                <a href="https://wa.me/919214784335?text=Hello%20AHK%20Marble%20Art,%20I%20want%20to%20inquire%20about%20your%20fountains%20and%20temples." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center py-3 rounded-xl font-medium flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-b from-marble-100 via-marble-50 to-marble-100 py-16 lg:py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-marble-200/80 px-4 py-1.5 rounded-full text-marble-800 text-xs sm:text-sm font-semibold tracking-wider uppercase border border-marble-300">
+                        <i class="fas fa-star text-gold"></i> Direct Manufacturer & Master Artisans
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-marble-900 leading-tight">
+                        Exquisite Stone Fountains, Temples & <span class="text-gold-dark italic">Handicrafts</span>
+                    </h1>
+                    <p class="text-marble-700 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Welcome to AHK Marble Art. Specializing in stunning white, yellow & brown marble fountains, grand handicraft pillar lamps, intricate CNC jalis, mandirs, deepaks, and relief sculptures as showcased in our studio catalog.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#products" class="w-full sm:w-auto bg-marble-900 hover:bg-marble-800 text-gold-light border border-gold/40 px-8 py-4 rounded-xl font-medium text-center shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                            <span>Explore Catalog</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="https://wa.me/919214784335?text=Hi%20AHK%20Marble%20Art,%20I%20want%20catalogs%20for%20fountains%20and%20temples." target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-medium text-center shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>WhatsApp 9214784335</span>
+                        </a>
+                    </div>
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-marble-200 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+                        <div>
+                            <span class="block font-serif font-bold text-2xl text-marble-900">100+</span>
+                            <span class="text-xs text-marble-600 uppercase tracking-wider">Founts & Sculptures</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif font-bold text-2xl text-marble-900">Pure</span>
+                            <span class="text-xs text-marble-600 uppercase tracking-wider">White & Colored Stone</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif font-bold text-2xl text-marble-900">Direct</span>
+                            <span class="text-xs text-marble-600 uppercase tracking-wider">Workshop Pricing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Showcase (Referencing the grand marble handicraft lamp from screenshot) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-gold to-marble-400 rounded-3xl blur-lg opacity-30 animate-pulse"></div>
+                        <div class="relative bg-white p-3 rounded-3xl shadow-2xl border border-marble-200">
+                            <!-- Direct match for the tall carved marble lamp in screenshot 1 -->
+                            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80" alt="Marble Handicraft Lamp Pillar" class="rounded-2xl w-full h-[420px] object-cover shadow-inner">
+                            <div class="absolute bottom-6 left-6 right-6 bg-marble-900/90 backdrop-blur-md p-4 rounded-2xl text-white border border-gold/30">
+                                <span class="text-gold text-xs font-semibold uppercase tracking-wider">As Seen In Reference</span>
+                                <h3 class="font-serif text-lg font-bold text-marble-100">Marble Handicraft Lamp 9214784335</h3>
+                                <p class="text-xs text-marble-300 mt-0.5">Tall freestanding perforated jali lamp with warm internal glow.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Catalog Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-dark font-semibold text-sm uppercase tracking-widest block mb-2">Our Complete Product Range</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-marble-900">Handcrafted Stone Masterpieces</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+                <p class="text-marble-700 mt-4 text-sm sm:text-base font-light">
+                    Browse our exact categories: White, Yellow & Brown Fountains, Hand-Carved Temples, CNC Jali Panels, Lamps, Deepaks, and Relief Sculptures.
+                </p>
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 mt-8">
+                    <button onclick="filterProducts('all')" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-marble-900 text-gold-light transition-all shadow-sm" data-filter="all">All Items</button>
+                    <button onclick="filterProducts('fountain')" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-marble-100 text-marble-800 hover:bg-marble-200 transition-all" data-filter="fountain">Fountains (White, Yellow, Brown)</button>
+                    <button onclick="filterProducts('temple')" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-marble-100 text-marble-800 hover:bg-marble-200 transition-all" data-filter="temple">Marble Temples & Mandir</button>
+                    <button onclick="filterProducts('jali')" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-marble-100 text-marble-800 hover:bg-marble-200 transition-all" data-filter="jali">CNC Work & Jali Panels</button>
+                    <button onclick="filterProducts('handicraft')" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-marble-100 text-marble-800 hover:bg-marble-200 transition-all" data-filter="handicraft">Lamps, Deepaks & Basins</button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. White & Brown Stone Fountains -->
+                <div class="product-card group bg-marble-50 rounded-2xl overflow-hidden border border-marble-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="fountain">
+                    <div class="relative h-64 overflow-hidden bg-marble-200">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f08f8?auto=format&fit=crop&w=700&q=80" alt="White and Brown Stone Fountain" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-marble-900/80 backdrop-blur-sm text-gold text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">Fountain</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-marble-900 group-hover:text-gold-dark transition-colors">Tiered Stone Water Fountain</h3>
+                            <p class="text-marble-600 text-xs font-mono mt-1">Ref: AHK-FTN-01 | Contact: 9214784335</p>
+                            <p class="text-marble-700 text-sm mt-3 font-light leading-relaxed">
+                                Elegant multi-tier garden water fountain crafted from durable natural stone with soothing cascading flow for luxury courtyards and lawns.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-4 border-t border-marble-200 flex items-center justify-between gap-3">
+                            <span class="text-xs font-semibold text-marble-800 bg-marble-200/60 px-2.5 py-1 rounded-md">Custom Size</span>
+                            <button onclick="openInquiry('Tiered Stone Water Fountain (Ref: AHK-FTN-01)')" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-medium px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Enquire Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Yellow & Sandstone Fountain -->
+                <div class="product-card group bg-marble-50 rounded-2xl overflow-hidden border border-marble-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="fountain">
+                    <div class="relative h-64 overflow-hidden bg-marble-200">
+                        <img src="https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?auto=format&fit=crop&w=700&q=80" alt="Yellow Sandstone Fountain" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-marble-900/80 backdrop-blur-sm text-gold text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">Fountain</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-marble-900 group-hover:text-gold-dark transition-colors">Yellow Sandstone Garden Fountain</h3>
+                            <p class="text-marble-600 text-xs font-mono mt-1">Ref: AHK-FTN-02 | Contact: 9214784335</p>
+                            <p class="text-marble-700 text-sm mt-3 font-light leading-relaxed">
+                                Beautiful golden sandstone fountain featuring traditional hand-carved floral motifs and central water spouts.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-4 border-t border-marble-200 flex items-center justify-between gap-3">
+                            <span class="text-xs font-semibold text-marble-800 bg-marble-200/60 px-2.5 py-1 rounded-md">Yellow Stone</span>
+                            <button onclick="openInquiry('Yellow Sandstone Garden Fountain (Ref: AHK-FTN-02)')" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-medium px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Enquire Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. White Marble Temple / Mandir -->
+                <div class="product-card group bg-marble-50 rounded-2xl overflow-hidden border border-marble-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="temple">
+                    <div class="relative h-64 overflow-hidden bg-marble-200">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80" alt="White Marble Temple" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-marble-900/80 backdrop-blur-sm text-gold text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">Temple</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-marble-900 group-hover:text-gold-dark transition-colors">Pure White Marble Home Mandir</h3>
+                            <p class="text-marble-600 text-xs font-mono mt-1">Ref: AHK-TMP-01 | Contact: 9214784335</p>
+                            <p class="text-marble-700 text-sm mt-3 font-light leading-relaxed">
+                                Intricately carved white marble temple complete with finely turned pillars, dome structure, and integrated LED lighting for home worship.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-4 border-t border-marble-200 flex items-center justify-between gap-3">
+                            <span class="text-xs font-semibold text-marble-800 bg-marble-200/60 px-2.5 py-1 rounded-md">Custom Mandir</span>
+                            <button onclick="openInquiry('Pure White Marble Home Mandir (Ref: AHK-TMP-01)')" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-medium px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Enquire Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Marble Handicraft Lamp & Pillar -->
+                <div class="product-card group bg-marble-50 rounded-2xl overflow-hidden border border-marble-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="handicraft">
+                    <div class="relative h-64 overflow-hidden bg-marble-200">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Marble Handicraft Lamp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-marble-900/80 backdrop-blur-sm text-gold text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">Handicraft Lamp</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-marble-900 group-hover:text-gold-dark transition-colors">Marble Handicraft Lamp Pillar</h3>
+                            <p class="text-marble-600 text-xs font-mono mt-1">Ref: AHK-LMP-01 | Contact: 9214784335</p>
+                            <p class="text-marble-700 text-sm mt-3 font-light leading-relaxed">
+                                As seen in our signature gallery. Tall freestanding perforated lamp casting soft warm lighting through delicate marble jali cutwork.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-4 border-t border-marble-200 flex items-center justify-between gap-3">
+                            <span class="text-xs font-semibold text-marble-800 bg-marble-200/60 px-2.5 py-1 rounded-md">Handcrafted</span>
+                            <button onclick="openInquiry('Marble Handicraft Lamp Pillar (Ref: AHK-LMP-01)')" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-medium px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Enquire Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. CNC Work & Marble Jali Panels -->
+                <div class="product-card group bg-marble-50 rounded-2xl overflow-hidden border border-marble-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="jali">
+                    <div class="relative h-64 overflow-hidden bg-marble-200">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" alt="CNC Marble Jali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-marble-900/80 backdrop-blur-sm text-gold text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">CNC & Jali</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-marble-900 group-hover:text-gold-dark transition-colors">CNC Work & Marble Jali Partition</h3>
+                            <p class="text-marble-600 text-xs font-mono mt-1">Ref: AHK-JAL-01 | Contact: 9214784335</p>
+                            <p class="text-marble-700 text-sm mt-3 font-light leading-relaxed">
+                                Precision CNC carved marble jali screens and lattice panels for room dividers, windows, and architectural facade decorations.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-4 border-t border-marble-200 flex items-center justify-between gap-3">
+                            <span class="text-xs font-semibold text-marble-800 bg-marble-200/60 px-2.5 py-1 rounded-md">Custom Jali</span>
+                            <button onclick="openInquiry('CNC Work & Marble Jali Partition (Ref: AHK-JAL-01)')" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-medium px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Enquire Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Marble Deepaks, Basins & Relief Sculptures -->
+                <div class="product-card group bg-marble-50 rounded-2xl overflow-hidden border border-marble-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="handicraft">
+                    <div class="relative h-64 overflow-hidden bg-marble-200">
+                        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=700&q=80" alt="Marble Deepak & Basin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-marble-900/80 backdrop-blur-sm text-gold text-xs font-semibold px-3 py-1 rounded-full border border-gold/30">Handicrafts</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-marble-900 group-hover:text-gold-dark transition-colors">Marble Deepak, Basin & Stone Reliefs</h3>
+                            <p class="text-marble-600 text-xs font-mono mt-1">Ref: AHK-HND-01 | Contact: 9214784335</p>
+                            <p class="text-marble-700 text-sm mt-3 font-light leading-relaxed">
+                                Handcrafted white marble oil deepaks, floral wash basins, carved stone wall relief sculptures, and decorative plates.
+                            </p>
+                        </div>
+                        <div class="pt-6 mt-4 border-t border-marble-200 flex items-center justify-between gap-3">
+                            <span class="text-xs font-semibold text-marble-800 bg-marble-200/60 px-2.5 py-1 rounded-md">Artisan Crafted</span>
+                            <button onclick="openInquiry('Marble Deepak, Basin & Stone Reliefs (Ref: AHK-HND-01)')" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-medium px-4 py-2.5 rounded-xl transition-colors flex items-center gap-1.5 shadow-sm">
+                                <i class="fab fa-whatsapp text-sm"></i> Enquire Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-marble-100 border-y border-marble-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-4 bg-gold/20 rounded-3xl blur-md"></div>
+                        <div class="grid grid-cols-2 gap-4 relative">
+                            <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80" alt="Master artisan carving stone fountain" class="rounded-2xl shadow-lg h-72 object-cover w-full">
+                            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80" alt="Marble workshop" class="rounded-2xl shadow-lg h-72 object-cover w-full mt-8">
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-white px-4 py-1.5 rounded-full text-marble-800 text-xs font-semibold tracking-wider uppercase border border-marble-300 shadow-sm">
+                        <i class="fas fa-hammer text-gold"></i> Heritage Stone Carving
+                    </div>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-marble-900 leading-tight">
+                        Crafting Fine Fountains, Temples & <span class="text-gold-dark">CNC Jali Art</span>
+                    </h2>
+                    <p class="text-marble-700 font-light leading-relaxed">
+                        At <strong class="font-semibold text-marble-900">AHK Marble Art</strong>, we specialize in bringing raw stone to life. Whether you need a majestic white/yellow marble fountain for your lawn, an intricate mandir for your home sanctuary, or precise CNC jali work, our master sculptors deliver unmatched artistry.
+                    </p>
+                    <p class="text-marble-700 font-light leading-relaxed">
+                        Every product is crafted using premium quality Makrana marble, sandstone, and specialized stone. Contact us directly at <a href="tel:9214784335" class="text-gold-dark font-semibold underline">9214784335</a> for customized sizes and designs.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-marble-900 text-gold flex items-center justify-center shrink-0 shadow">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-marble-900 text-sm">Fountains & Temples</h4>
+                                <p class="text-xs text-marble-600 mt-0.5">Specialized in water fountains and home mandirs.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-marble-900 text-gold flex items-center justify-center shrink-0 shadow">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-marble-900 text-sm">Safe Worldwide Delivery</h4>
+                                <p class="text-xs text-marble-600 mt-0.5">Robust wooden crating for safe transit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-dark font-semibold text-sm uppercase tracking-widest block mb-2">Workshop Studio</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-marble-900">Artisan Masterpieces Gallery</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
+                <p class="text-marble-700 mt-4 text-sm sm:text-base font-light">
+                    Real captures of our fountains, handicraft lamps, CNC jalis, and carved marble art.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="relative group overflow-hidden rounded-2xl aspect-square bg-marble-200">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f08f8?auto=format&fit=crop&w=500&q=80" alt="Fountain gallery" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-marble-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-medium">Stone Water Fountain</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl aspect-square bg-marble-200">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=80" alt="Temple gallery" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-marble-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-medium">White Marble Mandir</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl aspect-square bg-marble-200">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Lamp gallery" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-marble-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-medium">Handicraft Lamp Pillar</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl aspect-square bg-marble-200">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=500&q=80" alt="Jali gallery" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-marble-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                        <span class="text-white text-xs font-medium">CNC Jali Work Panel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contact" class="bg-marble-900 text-marble-100 pt-20 pb-12 border-t border-marble-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-marble-800">
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-full bg-marble-50 flex items-center justify-center border-2 border-gold shadow-md">
+                            <span class="text-marble-900 font-serif font-bold text-lg">AHK</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif font-bold text-xl tracking-wide text-white">AHK MARBLE ART</span>
+                            <span class="block text-xs tracking-widest text-gold uppercase">Fountains, Temples & Jali Art</span>
+                        </div>
+                    </div>
+                    <p class="text-marble-300 text-sm font-light leading-relaxed">
+                        Direct creators of marble fountains, white temples, CNC jalis, handicraft lamps, and deepaks. Crafted with passion at 9214784335.
+                    </p>
+                    <div class="space-y-3 pt-2">
+                        <a href="tel:9214784335" class="flex items-center gap-3 text-sm text-marble-200 hover:text-gold transition-colors">
+                            <div class="w-8 h-8 rounded-lg bg-marble-800 flex items-center justify-center text-gold"><i class="fas fa-phone-alt text-xs"></i></div>
+                            <span class="font-medium">+91 92147 84335</span>
+                        </a>
+                        <a href="https://wa.me/919214784335" target="_blank" class="flex items-center gap-3 text-sm text-marble-200 hover:text-gold transition-colors">
+                            <div class="w-8 h-8 rounded-lg bg-emerald-700 flex items-center justify-center text-white"><i class="fab fa-whatsapp"></i></div>
+                            <span class="font-medium">WhatsApp Direct Inquiry</span>
+                        </a>
+                        <div class="flex items-start gap-3 text-sm text-marble-200">
+                            <div class="w-8 h-8 rounded-lg bg-marble-800 flex items-center justify-center text-gold shrink-0"><i class="fas fa-map-marker-alt text-xs"></i></div>
+                            <span>Marble Handicraft Hub, Rajasthan, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="font-serif text-lg font-bold text-white tracking-wide">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm font-light text-marble-300">
+                        <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="#products" class="hover:text-gold transition-colors">Fountains & Temples</a></li>
+                        <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="#gallery" class="hover:text-gold transition-colors">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-gold transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-5 space-y-4 bg-marble-800/60 p-6 rounded-3xl border border-marble-700">
+                    <h4 class="font-serif text-lg font-bold text-white tracking-wide">Quick WhatsApp Inquiry</h4>
+                    <p class="text-xs text-marble-300 font-light">Send your requirements for fountains, temples or jali work.</p>
+                    <form onsubmit="submitQuickInquiry(event)" class="space-y-4 pt-2">
+                        <div>
+                            <input type="text" id="inquiry-name" placeholder="Your Name" required class="w-full bg-marble-900 border border-marble-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold">
+                        </div>
+                        <div>
+                            <textarea id="inquiry-message" rows="3" placeholder="Describe requirement (e.g., White marble fountain / Mandir size...)" required class="w-full bg-marble-900 border border-marble-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-sm">
+                            <i class="fab fa-whatsapp"></i> Send to WhatsApp (+91 9214784335)
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-marble-400 font-light">
+                <p>&copy; 2026 AHK Marble Art. All Rights Reserved.</p>
+                <p class="mt-2 sm:mt-0">Fountains, Temples, Lamps & CNC Jali Work</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Floating Action Buttons (WhatsApp & Call) -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="tel:9214784335" aria-label="Call AHK Marble Art" class="w-14 h-14 bg-marble-900 hover:bg-marble-800 text-gold rounded-full shadow-2xl flex items-center justify-center text-xl transition-all transform hover:scale-110 border-2 border-gold group relative">
+            <i class="fas fa-phone-alt"></i>
+            <span class="absolute right-16 bg-marble-900 text-white text-xs px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">Call: 9214784335</span>
+        </a>
+        <a href="https://wa.me/919214784335?text=Hello%20AHK%20Marble%20Art,%20I%20am%20interested%20in%20your%20fountains%20and%20temples." target="_blank" aria-label="Chat on WhatsApp" class="w-14 h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full shadow-2xl flex items-center justify-center text-2xl transition-all transform hover:scale-110 group relative">
+            <i class="fab fa-whatsapp"></i>
+            <span class="absolute right-16 bg-emerald-900 text-white text-xs px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">Chat on WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Custom Modal for Product Inquiry -->
+    <div id="inquiry-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-marble-50 max-w-md w-full rounded-3xl p-6 shadow-2xl border border-marble-200 relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closeInquiry()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-marble-200 text-marble-800 hover:bg-marble-900 hover:text-white flex items-center justify-center transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="mb-4">
+                <span class="text-xs font-semibold text-gold-dark uppercase tracking-wider">AHK Marble Art</span>
+                <h3 class="font-serif text-2xl font-bold text-marble-900 mt-1">Product Inquiry</h3>
+                <p id="modal-product-name" class="text-xs text-marble-600 mt-0.5 font-mono"></p>
+            </div>
+            <form onsubmit="submitModalInquiry(event)" class="space-y-4">
+                <input type="hidden" id="modal-product-input">
+                <div>
+                    <label class="block text-xs font-semibold text-marble-800 mb-1">Your Full Name</label>
+                    <input type="text" id="modal-name" required class="w-full bg-white border border-marble-300 rounded-xl px-4 py-3 text-sm text-marble-900 focus:outline-none focus:border-gold" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-marble-800 mb-1">City / Location</label>
+                    <input type="text" id="modal-city" required class="w-full bg-white border border-marble-300 rounded-xl px-4 py-3 text-sm text-marble-900 focus:outline-none focus:border-gold" placeholder="Enter your city">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-marble-800 mb-1">Customization / Requirements</label>
+                    <textarea id="modal-details" rows="3" class="w-full bg-white border border-marble-300 rounded-xl px-4 py-3 text-sm text-marble-900 focus:outline-none focus:border-gold resize-none" placeholder="Mention size or specific design..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-sm">
+                    <i class="fab fa-whatsapp text-lg"></i> Continue to WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                if(btn.getAttribute('data-filter') === category) {
+                    btn.classList.remove('bg-marble-100', 'text-marble-800');
+                    btn.classList.add('bg-marble-900', 'text-gold-light');
+                } else {
+                    btn.classList.remove('bg-marble-900', 'text-gold-light');
+                    btn.classList.add('bg-marble-100', 'text-marble-800');
+                }
+            });
+
+            cards.forEach(card => {
+                if(category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function openInquiry(productTitle) {
+            const modal = document.getElementById('inquiry-modal');
+            const productInput = document.getElementById('modal-product-input');
+            const productName = document.getElementById('modal-product-name');
+            
+            productInput.value = productTitle;
+            productName.innerText = "Inquiring about: " + productTitle;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeInquiry() {
+            const modal = document.getElementById('inquiry-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('inquiry-modal');
+            if (e.target === modal) {
+                closeInquiry();
+            }
+        });
+
+        function submitModalInquiry(e) {
+            e.preventDefault();
+            const product = document.getElementById('modal-product-input').value;
+            const name = document.getElementById('modal-name').value;
+            const city = document.getElementById('modal-city').value;
+            const details = document.getElementById('modal-details').value;
+
+            const text = `Hello AHK Marble Art,%0A%0AI want to inquire about:%0A*${product}*%0A%0A*Name:* ${name}%0A*City:* ${city}%0A*Details:* ${details}`;
+            window.open(`https://wa.me/919214784335?text=${text}`, '_blank');
+            closeInquiry();
+        }
+
+        function submitQuickInquiry(e) {
+            e.preventDefault();
+            const name = document.getElementById('inquiry-name').value;
+            const message = document.getElementById('inquiry-message').value;
+
+            const text = `Hello AHK Marble Art,%0A%0A*Name:* ${name}%0A*Message:* ${message}`;
+            window.open(`https://wa.me/919214784335?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
